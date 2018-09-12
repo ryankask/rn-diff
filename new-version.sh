@@ -1,4 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# Boilerplate from https://github.com/alphabetum/bash-boilerplate/blob/master/bash-simple
+set -o nounset
+set -o errexit
+trap 'echo "Aborting due to errexit on line $LINENO. Exit code: $?" >&2' ERR
+set -o errtrace
+set -o pipefail
+IFS=$'\n\t'
+
+# Main script
 
 newVersion=$2
 
